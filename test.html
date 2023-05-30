@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="move.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stretch Manipulation</title>
+   <a href="index.html">Home</a></li> 
+  </head>
+  <body>
+    <h1><strong>Stretch Manipulation</strong></h1>
+     
+      <script>
+        var video = document.querySelector("#base");
+        navigator.mediaDevices.enumerateDevices()
+      
+        if (!navigator.mediaDevices?.enumerateDevices) {
+          console.log("enumerateDevices() not supported.");
+        } else {
+          // List cameras and microphones.
+          navigator.mediaDevices
+            .enumerateDevices()
+            .then((devices) => {
+              devices.forEach((device) => {
+                console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
+              });
+            })
+            .catch((err) => {
+              console.error(`${err.name}: ${err.message}`);
+            });
+        }
+      </script>
+      </body>
+      </html>
+      

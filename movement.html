@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="move.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stretch Movement</title>
+   <a href="index.html">Home</a></li> 
+  </head>
+  <body>
+    <h1><strong>Stretch Movement</strong></h1>
+    
+    <div id="container">
+	    <video autoplay="true" id="videoElement" alt="Base Camera Feed">
+	
+	    </video>
+    </div>
+    <script>
+      var video = document.querySelector("#videoElement");
+
+      if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+         .then(function (stream) {
+           video.srcObject = stream;
+         })
+         .catch(function (err0r) {
+           console.log("Something went wrong!");
+         });
+        }
+    </script>
+ 
+
+    <div class="keys">
+      <div class="up arr"><i class="fa fa-arrow-up"></i></div>
+      <br />
+      <div class="left arr"><i class="fa fa-arrow-left"></i></div>  
+      <div class="down arr"><i class="fa fa-arrow-down"></i></div>
+      <div class="right arr"><i class="fa fa-arrow-right"></i></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="names">
+      <div class="uptext"></div>
+      <div class="downtext"></div>
+      <div class="lefttext"></div>
+      <div class="righttext"></div>
+      <div class="b"></div>  
+      <div class="a"></div>
+    </div>
+    
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+    <div class="flex-parent jc-center">
+      <button type="submit" class="magenta margin-right">Light</button>
+      <button type="submit" class="green margin-right">Water</button>
+      <button type="submit" class="magenta margin-right">Toy</button>
+      <button type="submit" class="green margin-right">Help</button>
+    </div>
+
+
+
+  </body>
+</html>
+
